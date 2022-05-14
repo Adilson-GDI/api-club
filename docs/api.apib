@@ -1,0 +1,112 @@
+FORMAT: 1A
+HOST: https://api.clubecasadesign.com.br/v1
+
+# API Club&Casa Design
+
+## Descrição
+
+A API do Club&Casa Design esta disponível para todos que tenham Autorização de acessa-la
+
+## Outros links:
+
+* Site -> [https://clubecasadesign.com.br](https://clubecasadesign.com.br)
+* Aplicação -> [https://app.clubecasadesign.com.br](https://app.clubecasadesign.com.br)
+
+## Codes HTTP
+
+> **200** -
+
+> **301** -
+
+> **400** -
+
+> **404** -
+
+> **406** -
+
+# Group Autenticação
+
+Para se altenticar na plataforma, é necessário fazer uso de dados de um login convencional, pelo menos no primeiro acesso
+
+## Question Collection [/login]
+
+### Obter token [POST]
+Obtem token para autenticação do usuário
+
+[//]: # (+ Parameters)
+
+[//]: # ()
+[//]: # (    + id: `68a5sdf67` &#40;required, string&#41; - The note ID)
+
++ Request (application/json)
+
+            {
+                "email": "email",
+                "password": "senha"
+            }
+
++ Response 200 (application/json)
+
+    + Headers
+
+            Location: /questions/1
+
+    + Body
+
+                {
+                    "question": "Favourite programming language?",
+                    "published_at": "2014-11-11T08:40:51.620Z",
+                    "url": "/questions/1",
+                    "choices": [
+                        {
+                            "choice": "Swift",
+                            "url": "/questions/1/choices/1",
+                            "votes": 0
+                        }, {
+                            "choice": "Python",
+                            "url": "/questions/1/choices/2",
+                            "votes": 0
+                        }, {
+                            "choice": "Objective-C",
+                            "url": "/questions/1/choices/3",
+                            "votes": 0
+                        }, {
+                            "choice": "Ruby",
+                            "url": "/questions/1/choices/4",
+                            "votes": 0
+                        }
+                    ]
+                }
+
++ Response 406 (application/json)
+
+    + Headers
+
+            Location: /questions/1
+
+    + Body
+
+                {
+                    "question": "Favourite programming language?",
+                    "published_at": "2014-11-11T08:40:51.620Z",
+                    "url": "/questions/1",
+                    "choices": [
+                        {
+                            "choice": "Swift",
+                            "url": "/questions/1/choices/1",
+                            "votes": 0
+                        }, {
+                            "choice": "Python",
+                            "url": "/questions/1/choices/2",
+                            "votes": 0
+                        }, {
+                            "choice": "Objective-C",
+                            "url": "/questions/1/choices/3",
+                            "votes": 0
+                        }, {
+                            "choice": "Ruby",
+                            "url": "/questions/1/choices/4",
+                            "votes": 0
+                        }
+                    ]
+                }
